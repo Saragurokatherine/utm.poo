@@ -13,5 +13,6 @@ public class aprendizaje1 {
         nivel = input.nextInt();
         System.out.print("Introduzca el tipo de operación aritmética (1-4): ");
         tipo = input.nextInt();
-        
+     }
+
     }
