@@ -73,3 +73,13 @@ public class aprendizaje1 {
             }
         }
 
+        // Realice un seguimiento de la puntuación del usuario y proporcione comentarios al final del programa
+        double percentage = (double) correcto / 10 * 100;
+        if (percentage < 75) {
+            System.out.println("Por favor, pida ayuda adicional a su instructor.");
+        } else {
+            System.out.println("Felicitaciones, estás listo para pasar al siguiente nivel!");
+        }
+        System.out.printf(". Has respondido correctamente a las preguntas %d y a las preguntas %d incorrectamente.Su puntuación es %.2f%%.\n", correcto, incorrecto, percentage);
+    }
+
