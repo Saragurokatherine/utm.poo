@@ -13,6 +13,7 @@ public class aprendizaje1 {
         nivel = input.nextInt();
         System.out.print("Introduzca el tipo de operación aritmética (1-4): ");
         tipo = input.nextInt();
+
          // Generar problemas aritméticos aleatorios basados en la entrada del usuario
 
          for (int i = 1; i <= 10; i++) {
@@ -31,6 +32,7 @@ public class aprendizaje1 {
                 num1 = random.nextInt(900) + 100;
                 num2 = random.nextInt(900) + 100;
             } 
+
             // Determinar el tipo de operación aritmética que se va a realizar en función de la entrada del usuario
 
             if (tipo == 1) {
@@ -46,5 +48,28 @@ public class aprendizaje1 {
                 operador = "/";
                 resultado = num1 / num2;
             }
+
+            // Pida al usuario que resuelva los problemas y proporcione comentarios basados en su respuesta
+            System.out.printf("Pregunta %d: ¿Qué es %d %s %d? ", i, num1, operador, num2);
+            respuesta = input.nextInt();
+
+            if (respuesta == resultado) {
+                correcto++;
+                System.out.println(getPositiveFeedback());
+            } else {
+                incorrecto++;
+                System.out.println(getNegativeFeedback());
+                while (respuesta != resultado) {
+                    System.out.print("Por favor, inténtelo de nuevo: ");
+                    respuesta = input.nextInt();
+                    if (respuesta == resultado) {
+                        correcto++;
+                        System.out.println(getPositiveFeedback());
+                    } else {
+                        incorrecto++;
+                        System.out.println(getNegativeFeedback());   
+                    }
+                }
+            }
         }
-    }
+
