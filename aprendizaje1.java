@@ -89,3 +89,11 @@ public class aprendizaje1 {
         SecureRandom random = new SecureRandom();
         return feedback[random.nextInt(feedback.length)];
     }
+
+    // Proporcionar comentarios negativos al usuario
+    public static String getNegativeFeedback() {
+        String[] feedback = {"No. Por favor, inténtelo de nuevo.\", \"Incorrecto. Por favor, inténtalo de nuevo.\", \"¡No te rindas!\", \"No. Sigue intentándolo."};
+        SecureRandom random = new SecureRandom();
+        return feedback[random.nextInt(feedback.length)];
+    }
+}
