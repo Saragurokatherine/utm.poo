@@ -83,3 +83,9 @@ public class aprendizaje1 {
         System.out.printf(". Has respondido correctamente a las preguntas %d y a las preguntas %d incorrectamente.Su puntuación es %.2f%%.\n", correcto, incorrecto, percentage);
     }
 
+    // Proporcionar comentarios positivos al usuario
+    public static String getPositiveFeedback() {
+        String[] feedback = {"¡Buen trabajo!\", \"¡Excelente!\", \"¡Bien hecho!\", \"¡Seguid así!"};
+        SecureRandom random = new SecureRandom();
+        return feedback[random.nextInt(feedback.length)];
+    }
